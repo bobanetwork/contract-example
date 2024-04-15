@@ -8,16 +8,14 @@ const prompt = require("prompt-sync")()
 
 async function main() {
 
-    console.log(`'Deploying Light bridge contract...`)
+    console.log(`'Deploying contract...`)
 
     const provider = hre.ethers.provider
     const network = hre.network
 
     console.log(`Network name=${network?.name}`)
-    let fileName
 
     const deployer = new Wallet(network.config.accounts[0], provider)
-    console.log(`Network, ${network?.name}`)
 
     const Factory__YourContract = new ethers.ContractFactory(
         YourContractJson.abi,

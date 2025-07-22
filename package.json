@@ -7,6 +7,7 @@
       "test/**/*.ts"
    ],
    "scripts": {
+      "deploy": "hardhat deploy --network boba_sepolia",
       "test": "hardhat test test/contract.spec.ts",
       "build": "yarn build:contracts && yarn build:typescript",
       "build:contracts": "hardhat compile",
